@@ -18,3 +18,10 @@ jobs:
     # Variabel lingkungan untuk job ini
     env:
       REQUIRED_VAR: "workflow_value"
+
+    steps:
+      - name: Chekcout repository code
+      - uses: actions/checkout@v4
+
+      - name: Ensure script is executable
+      - run: chmod +x scripts/my-script.sh
