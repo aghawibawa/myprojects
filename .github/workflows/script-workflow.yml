@@ -17,4 +17,4 @@ jobs:
 
     # Variabel lingkungan untuk job ini
     env:
-      REQUIRED_VAR:   "workflow_value"
+      REQUIRED_VAR: "workflow_value"
