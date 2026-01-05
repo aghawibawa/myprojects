@@ -1,0 +1,20 @@
+name: Script Workflow (Lint, Security, Test, Env)
+
+# Trigger: Jalan setiap ada push atau pull request ke branch main
+on:
+  push:
+    branches: [ main ]
+  pull-request:
+    branches: [ main ]
+
+jobs:
+  # --- JOB 1: BUILD & TEST ---
+  build-and-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+
+    # Variabel lingkungan untuk job ini
+    env:
+      REQUIRED_VAR:   "workflow_value"
